@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, inital-scale=1.0">
+		<title>Personal website</title>
+		<link rel="stylesheet" href="animate.css">
+		<link rel="stylesheet" href="js/side-kick.css">
+	</head>
+	<style>
+		body {
+			margin: 0;
+		}
+		.logo {
+			height: 100vh;
+			width: 100%;
+			box-shadow: inset 5em 0px 18em 0px #eee;
+			perspective: 1000px;
+		}
+		.logo_cont {
+			width: 148px;
+			height: 163px;
+			position: absolute;
+			left: 0;
+			right: 0;
+			overflow-y: scroll;
+			font-family: 'didot';
+			font-size: 30px;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			background: #000;
+		}
+		.logo_cont .pouch{
+			padding-top: 40px;
+			color: cyan;
+			margin: 0;
+			overflow: hidden;
+		}
+
+		@keyframes blot {
+			0% {
+				border: 70px solid cyan;
+				width: 0%;
+			 	height: 0%;
+			}
+			10% {
+				border: 70px solid cyan;
+			}
+			100% {
+					border: 0px solid dodgerblue;
+			 	width: 90%;
+			 	min-width: 400px;	
+			 	height: 100%;
+			 	background-color: #fff;
+			 }
+		}
+
+		.blot {
+		  -webkit-animation-name: blot;
+		  animation-name: blot;
+		  animation-duration: .5s;
+		}
+		.navi {
+		    display: none;
+		}
+		ul.navi li {
+		    padding: 20px 0;
+		    list-style: none;
+		    float: left;
+		    width: calc(100% / 4);
+	        letter-spacing: 2px;
+	        text-align: center;
+	        color: #fff;
+		    font-family: monospace;
+		    font-size: 15px;
+		}
+		.card {
+			float: left;
+			width: calc(100% / 3);
+			padding: 30px;
+			box-sizing: border-box;
+		}
+
+	</style>
+	<body>
+		<header class="logo">
+			<div class="animated card-swipe2 t6 lt  logo_cont">
+				<div class="pouch">
+					<div class="animated fadeInUp t1 hi-T1" style="animation-delay:.1s;font-weight: 600;padding: 20px 30px;padding-bottom: 5px">Hi,</div>
+					<div class="animated fadeInUp t1 hi-T2" style="animation-delay:.1s;font-weight: 600;padding: 0px 30px;padding-bottom: 20px">There.</div>
+				</div>
+				<main style="display: none">
+					<div class="card" style="font-family: lato; text-align: right; "> 
+						<h3 class="animated fadeInUp" style="font-weight: 900;font-size: 3vw;margin-bottom: 20px; ">
+						Michael John F. </h3>
+						<h6 class="animated fadeInUp" style="animation-delay:.4s;font-weight: 900;font-size: 1.5vw; color: #5794cf; margin: 5px 0; ">
+						WEB DESIGNER. </h6>
+						<hr class="animated fadeInRight" style="animation-delay:.6s;border-top: 6px solid #5794d2;width: 4vw;margin-right: 5px;">
+						<p class="animated fadeIn" style="animation-delay:.8s;font-size: 1.2vw; color: #666; line-height: 3vw; margin: 30px 0; ">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae nostrum optio ipsam hic ipsa. Ab iusto voluptatem, harum nemo distinctio! Impedit doloremque officia vero hic ut repellat fuga obcaecati quam!</p>
+						<button class="animated fadeIn" style="background: dodgerblue; padding: 10px 50px; color:  #fff; border: 1px solid #fff; box-shadow: 0 0 10em #aaa; font-weight: 900; ">
+						Hire</button>
+					</div>
+					<div class="card blast" style="padding: 30px 0; ">
+						<img class="animated fadeIn" src="ij.png" style="width: 100%; text-align:  center; ">
+					</div>
+					<div class="card" style="background: #eee; ">
+						<hr style="height: 122px; border: 0; border-left: 1px solid; ">
+						<ul style="    line-height: 4vw; font-size: 1.3vw; font-family: lato; list-style:  none; padding: 0; ">
+							<li class="animated fadeIn" style="animation-delay: .2s;">
+							DESIGN</li>
+							<li class="animated fadeIn" style="animation-delay: .4s;">
+							WEB DEVELOPMENT</li>
+							<li class="animated fadeIn" style="animation-delay: .6s;">
+							UI/UX</li>
+							<li class="animated fadeIn" style="animation-delay: .8s;">
+							FRONT END</li>
+						</ul>
+					</div>
+				</main>
+			</div>
+			
+		</header>
+
+		<script src="anime.js"></script>
+		<script src="jquery.js"></script>
+		<script src="side-kick.js"></script>
+		<script>
+			$(document).ready(function() {
+				setTimeout(function() {
+					$('.hi-T2').removeClass('fadeInUp t1').addClass('fadeOutDown t4');
+					$('.hi-T1').removeClass('fadeInUp t1').addClass('fadeOutDown t4');
+					setTimeout(function() {
+						$('.pouch').css('display', 'none').html('<ul class="navi animated fadeIn"><li>Home.</li><li>About.</li><li>Services.</li><li>Contact.</li></ul>');
+							$('.logo_cont').removeClass('card-swipe2 t6').addClass('blot t2');
+						setTimeout(function() {
+							$('.pouch').css('background-color', 'dodgerblue').addClass('card-swipe2').show();
+							setTimeout(function() {$('.navi,main').show();}, 400);
+							
+						}, 1000);
+					}, 800);
+					
+				}, 3000);
+			});
+		</script>
+	</body>
+</html>
