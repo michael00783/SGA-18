@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, inital-scale=1.0">
+	<title>Personal website</title>
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/side-kick.css">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Lato" rel="stylesheet">
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+		}
+		.nav-head1 {
+			background: #000;
+			padding: 10px 20px;
+		}
+
+		.nav-head1 nav li span{
+			color: #fff;
+		}
+		.nav-head1 nav li{
+			list-style: none;
+			display: inline;
+			padding: 0 10px;
+			font-size: 12px;
+			font-weight: 600;
+			color: #aaa;
+		 }
+		.nav-head2 {
+		    background: #252525;
+		    opacity: .9;
+		    overflow: hidden;
+		}
+		.nav-head3 {
+			background: url(https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+		    height: 550px;
+		    background-size: cover;
+		    position: absolute;
+		    width: 100%;
+		    z-index: -1;
+		    top: 0;
+		}
+		.nav-head3 .palt{
+			position: relative;
+			background: #0009;
+			height: 100%;
+		}
+		.head-content {
+			    position: absolute;
+			    top: 0;
+			    bottom: 0;
+			    left: 0;
+			    right: 0;
+			    margin: auto;
+			    color: #fff;
+			    font-size: 60px;
+			    height: max-content;
+			    transform: translateY(50px);
+		}
+		.head-content h1{
+			    margin: auto;
+			    color: #fff;
+			    font-size: 60px;
+			    width: 450px;
+			    border-left: 6px solid #ecc703;
+			    padding: 5px 40px;
+			    padding-right: 0;
+			    font-family: 'Kaushan Script', cursive;
+		}
+		.nav-head2 .container nav li {
+			display: inline;
+			color: #fff;
+		}
+
+		.lead-nav{
+			font-size: 12px;
+			font-family: lato;
+			padding: 0 20px;
+			letter-spacing: 1px;
+			font-weight: 900;
+			color: #666;
+			transition: all 0.3s;
+		}
+		.lead-nav:hover {
+			color: #846f00;
+			cursor: pointer;
+			transition: all 0.3s;
+		}
+		.lead_active{
+			color: #fff!important;
+			position: relative;
+
+		}
+		.lead_active::before {
+		    position: absolute;
+		    content: '';
+		    width: 30%;
+		    height: 3px;
+		    background: gold;
+		    top: -10px;
+		}
+		li.width-divide {
+		    padding: 0 10vw;
+		}
+		.reserve {
+			background: transparent;
+			    border: 0;
+			    border-radius: 50px;
+			    font-size: 20px;
+			    font-weight: 600;
+			    letter-spacing: 0;
+			    padding: 10px 50px;
+			    font-family: sans-serif;
+			    width: 30%;
+			    color: gold;
+			    border: 5px solid #fff1016b;
+			    transform: translateX(-70px);
+			    transition: all 0.3s;
+		}
+		.reserve:hover {
+			background: gold;
+			color: #000;
+			cursor: pointer;
+			transition: all 0.3s;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="nav-head1">
+			<nav>
+				<li>
+					114 community road, Ijegun-Ikotun, Lagos
+				</li>
+				<li>
+					Tel: +234 (813) 575 1604
+				</li>
+				<li>
+					<span><i class="fa fa-facebook pr-1"></i></span>
+					<span><i class="fa fa-twitter pr-1"></i></span>
+					<span><i class="fa fa-linkedin pr-1"></i></span>
+					<span><i class="fa fa-google-plus pr-1"></i></span>
+					<span><i class="fa fa-instagram pr-1"></i></span>
+					<span><i class="fa fa-pinterest pr-1"></i></span>
+					<span><i class="fa fa-youtube pr-1"></i></span>
+				</li>
+				<li style="float: right;" class="hidden-sm-down">
+					Working hours: Monday - Friday 10:00am - 12:00pm
+				</li>
+			</nav>
+		</div>	
+		<div class="nav-head2">
+			<div class="container">
+				<nav>
+					<li><img src="https://cdn.dribbble.com/users/627/screenshots/1854272/restaurant-drbl_1x.png" alt="" style="width: 100px;"></li>
+					<li><span style="margin-left: -30px;font-weight: 900;letter-spacing: 1px;border-left: 1px solid #555;padding: 0 10px;">Miko'S</span></li>
+					<li class="width-divide"></li>
+					<li><span class="lead-nav lead_active">HOME</span></li>
+					<li><span class="lead-nav">ABOUT</span></li>
+					<li><span class="lead-nav">SHOP</span></li>
+					<li><span class="lead-nav">FIND</span></li>
+					<li><span class="lead-nav">CONTACT</span></li>
+				</nav>
+			</div>
+		</div>	
+		<div class="nav-head3">
+			<div class="palt">
+				<div class="head-content">
+					<h1>A treat your taste buds wont forget</h1>	
+					<center>
+						<button class="reserve">Reserve a table!</button>
+					</center>
+				</div>
+			</div>
+			
+		</div>	
+	</header>
+
+</body>
+</html>
