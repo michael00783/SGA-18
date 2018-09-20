@@ -16,9 +16,15 @@
 			padding: 0;
 			margin: 0;
 		}
+		header {
+			height: 550px;
+		}
 		.nav-head1 {
 			background: #000;
 			padding: 10px 20px;
+    position: absolute;
+    width: 100%;
+    z-index: 9;
 		}
 
 		.nav-head1 nav li span{
@@ -34,8 +40,13 @@
 		 }
 		.nav-head2 {
 		    background: #252525;
-		    opacity: .9;
+		    opacity: .7;
 		    overflow: hidden;
+		    clear: both;
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+    margin-top: 43px;
 		}
 		.nav-head3 {
 			background: url(https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
@@ -43,7 +54,6 @@
 		    background-size: cover;
 		    position: absolute;
 		    width: 100%;
-		    z-index: -1;
 		    top: 0;
 		}
 		.nav-head3 .palt{
@@ -64,10 +74,11 @@
 			    transform: translateY(50px);
 		}
 		.head-content h1{
-			    margin: auto;
+			margin: auto;
 			    color: #fff;
-			    font-size: 60px;
-			    width: 450px;
+			    font-size: 11vmin;
+			    max-width: 450px;
+			    width: 90%;
 			    border-left: 6px solid #ecc703;
 			    padding: 5px 40px;
 			    padding-right: 0;
@@ -84,7 +95,7 @@
 			padding: 0 20px;
 			letter-spacing: 1px;
 			font-weight: 900;
-			color: #666;
+			color: #999;
 			transition: all 0.3s;
 		}
 		.lead-nav:hover {
@@ -106,21 +117,22 @@
 		    top: -10px;
 		}
 		li.width-divide {
-		    padding: 0 10vw;
+		    padding: 0 5vw;
 		}
 		.reserve {
 			background: transparent;
 			    border: 0;
 			    border-radius: 50px;
-			    font-size: 20px;
+			     font-size: 20px; 
 			    font-weight: 600;
 			    letter-spacing: 0;
 			    padding: 10px 50px;
 			    font-family: sans-serif;
-			    width: 30%;
+			    max-width: 300px;
+			    width: 31vw;
 			    color: gold;
 			    border: 5px solid #fff1016b;
-			    transform: translateX(-70px);
+			    transform: translateX(-9vw);
 			    transition: all 0.3s;
 		}
 		.reserve:hover {
@@ -129,9 +141,112 @@
 			cursor: pointer;
 			transition: all 0.3s;
 		}
+		@media (min-width: 768px) {
+			.container {
+			    width: 750px;
+			    max-width: 100%;
+			}
+		}
+		@media (min-width: 1200px){
+			.container {
+			    width: 1140px;
+			    max-width: 100%;
+			}
+		}
+		.bread-crumb span {
+			padding: 0px 10px;
+		    box-sizing: border-box;
+		    border-radius: 50%;
+		    background: #54512340;
+		    margin: 20px;
+		}
+		.bread-crumb {
+		    transform: scale(0.8);
+		    margin-top: 40px;
+		}
+		.dish-range img:hover {
+			opacity: .4;
+			transition: all 0.4s;
+		}
+		.dish-range img {
+		    width: calc(300px - 4px);
+		    height: 200px;
+		    margin-bottom: 4px;
+		    transition: all 0.4s;
+		    cursor: pointer;
+		}
+		.dish-range {
+			    max-width: 900px;
+			    margin: auto;
+		}
+		.view-dish {
+
+			position: fixed;
+			top: 4em;
+			left: 0;
+			width: 100%;
+			overflow-y: scroll;
+			display: none;
+			max-width: 1000px;
+			background: #fff;
+			height: 100%;
+			box-shadow: 0 0 0 13em #000a;
+			margin: auto;
+			right: 0;
+			z-index: 9;
+
+		}
+		.the-making::before {
+		    position: absolute;
+		    content: '';
+		    height: 100px;
+		    width: 1px;
+		    top: -54px;
+		    left: 00;
+		    background: #9a9a9a;
+		}
+		.the-making {
+			position: relative;
+			    padding: 20px;
+			    margin: 32px;
+			    font-weight: 900;
+			    font-family: serif;
+		}
+		.Reciepe {
+		    padding: 30px;
+		}
 	</style>
 </head>
 <body>
+	<div class="animated fadeIn view-dish ">
+		<div class="close" style="right: 70px; padding: 20px; position: absolute; border: 1px solid; color: #000; opacity: 1; cursor: pointer;
+		">X</div>
+		<div class="downtop" style="transform: rotate(-90deg); width: max-content; margin-left: auto; color: #888; font-size: 12px; margin-right: 25px; transform-origin: right; ">Lorem ipsum dolor sit amet, consectetur adipisicing elit?</div>
+		<div class="animated fadeInDown the-making">
+			<h5 style="color: #999; ">NAME OF AN AFRICAN MEAL</h5>
+
+		</div>
+		<div class="Reciepe">
+			<h1 style="font-family: lato; font-weight: 900; ">RECIPIE:</h1>
+				<div class="row">
+			
+					<div class="col-sm-6">
+						<img src="" class="meal" style="width: 100%;">
+					</div>
+					<div class="col-sm-6" style="font-family: lato; ">
+						<h3 style="font-weight: 900; ">MEAL NAME</h3>
+						<h6 style="color: #e4b002; font-family: lato; ">MEAL ORIGIN AND TRIBE</h6>
+						<hr style="width: 50px; margin-left: 0; border-top: 8px solid orange; ">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis iste tenetur voluptas! Deleniti animi tenetur ipsa aspernatur, vel ratione nihil vitae fugiat, porro placeat molestias voluptatum facere accusantium veniam, id!
+						</p>
+					</div>
+			
+				</div>
+			
+
+		</div>
+	</div>
 	<header>
 		<div class="nav-head1">
 			<nav>
@@ -141,7 +256,7 @@
 				<li>
 					Tel: +234 (813) 575 1604
 				</li>
-				<li>
+				<li class="hidden-sm-down">
 					<span><i class="fa fa-facebook pr-1"></i></span>
 					<span><i class="fa fa-twitter pr-1"></i></span>
 					<span><i class="fa fa-linkedin pr-1"></i></span>
@@ -150,7 +265,7 @@
 					<span><i class="fa fa-pinterest pr-1"></i></span>
 					<span><i class="fa fa-youtube pr-1"></i></span>
 				</li>
-				<li style="float: right;" class="hidden-sm-down">
+				<li style="float: right;" class="hidden-md-down">
 					Working hours: Monday - Friday 10:00am - 12:00pm
 				</li>
 			</nav>
@@ -161,11 +276,11 @@
 					<li><img src="https://cdn.dribbble.com/users/627/screenshots/1854272/restaurant-drbl_1x.png" alt="" style="width: 100px;"></li>
 					<li><span style="margin-left: -30px;font-weight: 900;letter-spacing: 1px;border-left: 1px solid #555;padding: 0 10px;">Miko'S</span></li>
 					<li class="width-divide"></li>
-					<li><span class="lead-nav lead_active">HOME</span></li>
-					<li><span class="lead-nav">ABOUT</span></li>
-					<li><span class="lead-nav">SHOP</span></li>
-					<li><span class="lead-nav">FIND</span></li>
-					<li><span class="lead-nav">CONTACT</span></li>
+					<li class="hidden-sm-down"><span class="lead-nav lead_active">HOME</span></li>
+					<li class="hidden-sm-down"><span class="lead-nav">ABOUT</span></li>
+					<li class="hidden-sm-down"><span class="lead-nav">SHOP</span></li>
+					<li class="hidden-sm-down"><span class="lead-nav">FIND</span></li>
+					<li class="hidden-sm-down"><span class="lead-nav">CONTACT</span></li>
 				</nav>
 			</div>
 		</div>	
@@ -174,13 +289,115 @@
 				<div class="head-content">
 					<h1>A treat your taste buds wont forget</h1>	
 					<center>
-						<button class="reserve">Reserve a table!</button>
+						<button class="reserve hidden-md-down" style="transform: translateX(-50px);">Reserve a table!</button>
+						<button class="reserve hidden-lg-up">Reserve a table!</button>
 					</center>
 				</div>
 			</div>
 			
 		</div>	
 	</header>
+	<section style="padding: 100px 40px; ">
+		<div style="max-width: 700px; width: 90%; margin: auto; text-align: center; ">
+			<h4 style="color: #ffac00; ">Miko's</h4>
+			<h3 style="text-transform: uppercase;font-family: sans-serif;font-weight: 900;color: #000;">True african &amp; continental Cusines</h3>
+			
+			<p style="padding-top: 20px; ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque repellendus inventore, quia ratione numquam blanditiis consequuntur odit alias magnam nesciunt, quisquam quam, laudantium? Tenetur, aut iure in magnam et, architecto!</p>
+			<p style="color: #d38a03; text-decoration: underline; font-weight: 600; ">Read our story</p>
+			<div class="bread-crumb">
+				<span class="active" style="background: #ffac0082; "></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</section>
+	<section style="padding: 100px 40px; background: url(https://images.pexels.com/photos/8313/food-eating-potatoes-beer-8313.jpg?auto=compress&cs=tinysrgb&h=350);background-repeat: no-repeat;background-size: cover;background-attachment: fixed;position: relative;">
+		<div style="background: #000a;width: 100%;position: absolute;top: 0;left: 0;height: 100%;color: #fff;text-align: center;padding: 80px 0;">
+					
+			<h1 style="font-family: sans-serif; font-weight: 600; ">Food is Ready!!</h1> 
+			<p style="font-size: 26px; color: #ddd; ">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		</div>
+	</section>
+	<section style="padding: 110px 40px;text-align: center; ">
+		<h4 style="font-weight: 600; font-family: sans-serif; ">OUR RANGE OF DISHES</h4> 
+		<p style="margin-bottom: 3em; ">Select a dish to see the difference between ours and theirs</p>
+		<div class="dish-range">
+			<img srcset="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350 1x, https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=350 2x" width="622" height="350" style="background:rgb(140,91,53)" class="photo-item__img" alt="Free stock photo of food, dinner, lunch, meal" data-big-src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" data-large-src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" data-pin-media="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=1200&amp;w=800" src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
+			
+			<img srcset="https://images.pexels.com/photos/54455/cook-food-kitchen-eat-54455.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350 1x, https://images.pexels.com/photos/54455/cook-food-kitchen-eat-54455.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=350 2x" width="583" height="350" style="background:rgb(64,55,40)" class="photo-item__img" alt="Five White Plates With Different Kinds of Dishes" data-big-src="https://images.pexels.com/photos/54455/cook-food-kitchen-eat-54455.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" data-large-src="https://images.pexels.com/photos/54455/cook-food-kitchen-eat-54455.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" data-pin-media="https://images.pexels.com/photos/54455/cook-food-kitchen-eat-54455.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=1200&amp;w=800" src="https://images.pexels.com/photos/54455/cook-food-kitchen-eat-54455.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
+			
+			<img srcset="https://images.pexels.com/photos/459469/pexels-photo-459469.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350 1x, https://images.pexels.com/photos/459469/pexels-photo-459469.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=350 2x" width="538" height="350" style="background:rgb(165,98,71)" class="photo-item__img" alt="Free stock photo of food, vegetables, wood, tomatoes" data-big-src="https://images.pexels.com/photos/459469/pexels-photo-459469.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" data-large-src="https://images.pexels.com/photos/459469/pexels-photo-459469.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" data-pin-media="https://images.pexels.com/photos/459469/pexels-photo-459469.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=1200&amp;w=800" src="https://images.pexels.com/photos/459469/pexels-photo-459469.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
+			
+			<img srcset="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350 1x, https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=350 2x" width="573" height="350" style="background:rgb(136,125,116)" class="photo-item__img" alt="Free stock photo of food, plate, blur, breakfast" data-big-src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" data-large-src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" data-pin-media="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=1200&amp;w=800" src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
+			
+			<img srcset="https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg?auto=compress&amp;cs=tinysrgb&amp;h=350 1x, https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=350 2x" width="525" height="350" style="background:rgb(123,128,116)" class="photo-item__img" alt="Spinach, chicken &amp; pomegranate salad" data-big-src="https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" data-large-src="https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" data-pin-media="https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=1200&amp;w=800" src="https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg?auto=compress&amp;cs=tinysrgb&amp;h=350">
+			
+			<img srcset="https://images.pexels.com/photos/5317/food-salad-restaurant-person.jpg?auto=compress&amp;cs=tinysrgb&amp;h=350 1x, https://images.pexels.com/photos/5317/food-salad-restaurant-person.jpg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=350 2x" width="504" height="350" style="background:rgb(149,134,120)" class="photo-item__img" alt="Free stock photo of food, salad, restaurant, person" data-big-src="https://images.pexels.com/photos/5317/food-salad-restaurant-person.jpg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" data-large-src="https://images.pexels.com/photos/5317/food-salad-restaurant-person.jpg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" data-pin-media="https://images.pexels.com/photos/5317/food-salad-restaurant-person.jpg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=1200&amp;w=800" src="https://images.pexels.com/photos/5317/food-salad-restaurant-person.jpg?auto=compress&amp;cs=tinysrgb&amp;h=350">
+			
+			<img srcset="https://images.pexels.com/photos/616404/pexels-photo-616404.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350 1x, https://images.pexels.com/photos/616404/pexels-photo-616404.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=350 2x" width="528" height="350" style="background:rgb(201,175,137)" class="photo-item__img" alt="Free stock photo of food, salad, healthy, vegetables" data-big-src="https://images.pexels.com/photos/616404/pexels-photo-616404.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" data-large-src="https://images.pexels.com/photos/616404/pexels-photo-616404.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" data-pin-media="https://images.pexels.com/photos/616404/pexels-photo-616404.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=1200&amp;w=800" src="https://images.pexels.com/photos/616404/pexels-photo-616404.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
+			
+			<img srcset="https://images.pexels.com/photos/76093/pexels-photo-76093.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350 1x, https://images.pexels.com/photos/76093/pexels-photo-76093.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=350 2x" width="559" height="350" style="background:rgb(84,67,53)" class="photo-item__img" alt="Vegetable Food Cooked on Frying Pan" data-big-src="https://images.pexels.com/photos/76093/pexels-photo-76093.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" data-large-src="https://images.pexels.com/photos/76093/pexels-photo-76093.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" data-pin-media="https://images.pexels.com/photos/76093/pexels-photo-76093.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=1200&amp;w=800" src="https://images.pexels.com/photos/76093/pexels-photo-76093.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
+			
+			<img srcset="https://images.pexels.com/photos/277253/pexels-photo-277253.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350 1x, https://images.pexels.com/photos/277253/pexels-photo-277253.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=350 2x" width="312" height="350" style="background:rgb(76,67,62)" class="photo-item__img" alt="Free stock photo of food, art, table, kitchen" data-big-src="https://images.pexels.com/photos/277253/pexels-photo-277253.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" data-large-src="https://images.pexels.com/photos/277253/pexels-photo-277253.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" data-pin-media="https://images.pexels.com/photos/277253/pexels-photo-277253.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=1200&amp;w=800" src="https://images.pexels.com/photos/277253/pexels-photo-277253.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
+			
+			<img srcset="https://images.pexels.com/photos/940302/pexels-photo-940302.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350 1x, https://images.pexels.com/photos/940302/pexels-photo-940302.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=350 2x" width="525" height="350" style="background:rgb(244,214,71)" class="photo-item__img" alt="Black Fork and Knife Clip-art" data-big-src="https://images.pexels.com/photos/940302/pexels-photo-940302.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" data-large-src="https://images.pexels.com/photos/940302/pexels-photo-940302.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" data-pin-media="https://images.pexels.com/photos/940302/pexels-photo-940302.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=1200&amp;w=800" src="https://images.pexels.com/photos/940302/pexels-photo-940302.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
+			
+			<img srcset="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350 1x, https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=350 2x" width="526" height="350" style="background:rgb(132,129,116)" class="photo-item__img" alt="Fries and Burger on Plate" data-big-src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" data-large-src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" data-pin-media="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=1200&amp;w=800" src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
+			
+			<img srcset="https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350 1x, https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=350 2x" width="466" height="350" style="background:rgb(168,135,111)" class="photo-item__img" alt="Brown Fish Fillet on White Ceramic Plate" data-big-src="https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" data-large-src="https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" data-pin-media="https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=1200&amp;w=800" src="https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
+			
+			<img srcset="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350 1x, https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=350 2x" width="622" height="350" style="background:rgb(112,84,51)" class="photo-item__img" alt="White and Brown Cooked Dish on White Ceramic Bowls" data-big-src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" data-large-src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" data-pin-media="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=1200&amp;w=800" src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
+			
+			<img srcset="https://images.pexels.com/photos/1095550/pexels-photo-1095550.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350 1x, https://images.pexels.com/photos/1095550/pexels-photo-1095550.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=350 2x" width="525" height="350" style="background:rgb(220,220,210)" class="photo-item__img" alt="Vegetable Sandwich on Plate" data-big-src="https://images.pexels.com/photos/1095550/pexels-photo-1095550.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" data-large-src="https://images.pexels.com/photos/1095550/pexels-photo-1095550.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" data-pin-media="https://images.pexels.com/photos/1095550/pexels-photo-1095550.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=1200&amp;w=800" src="https://images.pexels.com/photos/1095550/pexels-photo-1095550.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
+			
+			<img srcset="https://images.pexels.com/photos/372882/pexels-photo-372882.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350 1x, https://images.pexels.com/photos/372882/pexels-photo-372882.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=350 2x" width="525" height="350" style="background:rgb(19,18,14)" class="photo-item__img" alt="Free stock photo of food, cold, vegetables, red" data-big-src="https://images.pexels.com/photos/372882/pexels-photo-372882.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" data-large-src="https://images.pexels.com/photos/372882/pexels-photo-372882.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" data-pin-media="https://images.pexels.com/photos/372882/pexels-photo-372882.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=1200&amp;w=800" src="https://images.pexels.com/photos/372882/pexels-photo-372882.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
+			
+			    <img srcset="https://images.pexels.com/photos/326278/pexels-photo-326278.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350 1x, https://images.pexels.com/photos/326278/pexels-photo-326278.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=350 2x" width="524" height="350" style="background:rgb(105,79,63)" class="photo-item__img" alt="Food on Table" data-big-src="https://images.pexels.com/photos/326278/pexels-photo-326278.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" data-large-src="https://images.pexels.com/photos/326278/pexels-photo-326278.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" data-pin-media="https://images.pexels.com/photos/326278/pexels-photo-326278.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=1200&amp;w=800" src="https://images.pexels.com/photos/326278/pexels-photo-326278.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
+			
+			    <img srcset="https://images.pexels.com/photos/162971/potatoes-french-mourning-funny-162971.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350 1x, https://images.pexels.com/photos/162971/potatoes-french-mourning-funny-162971.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=350 2x" width="552" height="350" style="background:rgb(165,139,89)" class="photo-item__img" alt="Brown Potato in Front of French Fries" data-big-src="https://images.pexels.com/photos/162971/potatoes-french-mourning-funny-162971.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" data-large-src="https://images.pexels.com/photos/162971/potatoes-french-mourning-funny-162971.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" data-pin-media="https://images.pexels.com/photos/162971/potatoes-french-mourning-funny-162971.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=1200&amp;w=800" src="https://images.pexels.com/photos/162971/potatoes-french-mourning-funny-162971.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
+			
+			    <img srcset="https://images.pexels.com/photos/769289/pexels-photo-769289.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350 1x, https://images.pexels.com/photos/769289/pexels-photo-769289.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=350 2x" width="525" height="350" style="background:rgb(106,87,63)" class="photo-item__img" alt="Steak Food" data-big-src="https://images.pexels.com/photos/769289/pexels-photo-769289.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" data-large-src="https://images.pexels.com/photos/769289/pexels-photo-769289.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" data-pin-media="https://images.pexels.com/photos/769289/pexels-photo-769289.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=1200&amp;w=800" src="https://images.pexels.com/photos/769289/pexels-photo-769289.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
+			
+			    <img srcset="https://images.pexels.com/photos/247685/pexels-photo-247685.png?auto=compress&amp;cs=tinysrgb&amp;h=350 1x, https://images.pexels.com/photos/247685/pexels-photo-247685.png?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=350 2x" width="467" height="350" style="background:rgb(216,176,145)" class="photo-item__img" alt="Close-up of Food" data-big-src="https://images.pexels.com/photos/247685/pexels-photo-247685.png?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" data-large-src="https://images.pexels.com/photos/247685/pexels-photo-247685.png?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" data-pin-media="https://images.pexels.com/photos/247685/pexels-photo-247685.png?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=1200&amp;w=800" src="https://images.pexels.com/photos/247685/pexels-photo-247685.png?auto=compress&amp;cs=tinysrgb&amp;h=350">
+			
+			    <img srcset="https://images.pexels.com/photos/8313/food-eating-potatoes-beer-8313.jpg?auto=compress&amp;cs=tinysrgb&amp;h=350 1x, https://images.pexels.com/photos/8313/food-eating-potatoes-beer-8313.jpg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=350 2x" width="525" height="350" style="background:rgb(118,98,76)" class="photo-item__img" alt="Green Salad on White Plate Near Grilled Potatoes on Brown Table" data-big-src="https://images.pexels.com/photos/8313/food-eating-potatoes-beer-8313.jpg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" data-large-src="https://images.pexels.com/photos/8313/food-eating-potatoes-beer-8313.jpg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" data-pin-media="https://images.pexels.com/photos/8313/food-eating-potatoes-beer-8313.jpg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=1200&amp;w=800" src="https://images.pexels.com/photos/8313/food-eating-potatoes-beer-8313.jpg?auto=compress&amp;cs=tinysrgb&amp;h=350">
+			
+			    <img srcset="https://images.pexels.com/photos/8500/food-dinner-pasta-spaghetti-8500.jpg?auto=compress&amp;cs=tinysrgb&amp;h=350 1x, https://images.pexels.com/photos/8500/food-dinner-pasta-spaghetti-8500.jpg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=350 2x" width="522" height="350" style="background:rgb(169,149,120)" class="photo-item__img" alt="Spaghetti on White Plate" data-big-src="https://images.pexels.com/photos/8500/food-dinner-pasta-spaghetti-8500.jpg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" data-large-src="https://images.pexels.com/photos/8500/food-dinner-pasta-spaghetti-8500.jpg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" data-pin-media="https://images.pexels.com/photos/8500/food-dinner-pasta-spaghetti-8500.jpg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=1200&amp;w=800" src="https://images.pexels.com/photos/8500/food-dinner-pasta-spaghetti-8500.jpg?auto=compress&amp;cs=tinysrgb&amp;h=350">
+			
+			    <img srcset="https://images.pexels.com/photos/264537/pexels-photo-264537.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350 1x, https://images.pexels.com/photos/264537/pexels-photo-264537.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=350 2x" width="466" height="350" style="background:rgb(166,98,39)" class="photo-item__img" alt="Free stock photo of food, healthy, vegetables, red" data-big-src="https://images.pexels.com/photos/264537/pexels-photo-264537.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" data-large-src="https://images.pexels.com/photos/264537/pexels-photo-264537.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" data-pin-media="https://images.pexels.com/photos/264537/pexels-photo-264537.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=1200&amp;w=800" src="https://images.pexels.com/photos/264537/pexels-photo-264537.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
+			
+			    <img srcset="https://images.pexels.com/photos/566566/pexels-photo-566566.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350 1x, https://images.pexels.com/photos/566566/pexels-photo-566566.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=350 2x" width="524" height="350" style="background:rgb(151,141,115)" class="photo-item__img" alt="Free stock photo of bread, food, plate, salad" data-big-src="https://images.pexels.com/photos/566566/pexels-photo-566566.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" data-large-src="https://images.pexels.com/photos/566566/pexels-photo-566566.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" data-pin-media="https://images.pexels.com/photos/566566/pexels-photo-566566.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=1200&amp;w=800" src="https://images.pexels.com/photos/566566/pexels-photo-566566.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
+			
+			    <img srcset="https://images.pexels.com/photos/349609/pexels-photo-349609.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350 1x, https://images.pexels.com/photos/349609/pexels-photo-349609.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=350 2x" width="528" height="350" style="background:rgb(203,205,195)" class="photo-item__img" alt="Free stock photo of food, healthy, wood, texture" data-big-src="https://images.pexels.com/photos/349609/pexels-photo-349609.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" data-large-src="https://images.pexels.com/photos/349609/pexels-photo-349609.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" data-pin-media="https://images.pexels.com/photos/349609/pexels-photo-349609.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=1200&amp;w=800" src="https://images.pexels.com/photos/349609/pexels-photo-349609.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
+			
+			    <img srcset="https://images.pexels.com/photos/675951/pexels-photo-675951.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350 1x, https://images.pexels.com/photos/675951/pexels-photo-675951.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=350 2x" width="525" height="350" style="background:rgb(152,128,94)" class="photo-item__img" alt="Selective Focus Photography of Beef Steak With Sauce" data-big-src="https://images.pexels.com/photos/675951/pexels-photo-675951.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" data-large-src="https://images.pexels.com/photos/675951/pexels-photo-675951.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" data-pin-media="https://images.pexels.com/photos/675951/pexels-photo-675951.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=1200&amp;w=800" src="https://images.pexels.com/photos/675951/pexels-photo-675951.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
+			
+			    <img srcset="https://images.pexels.com/photos/132694/pexels-photo-132694.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350 1x, https://images.pexels.com/photos/132694/pexels-photo-132694.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=350 2x" width="524" height="350" style="background:rgb(169,142,126)" class="photo-item__img" alt="Free stock photo of food, plate, chocolate, dessert" data-big-src="https://images.pexels.com/photos/132694/pexels-photo-132694.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" data-large-src="https://images.pexels.com/photos/132694/pexels-photo-132694.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" data-pin-media="https://images.pexels.com/photos/132694/pexels-photo-132694.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=1200&amp;w=800" src="https://images.pexels.com/photos/132694/pexels-photo-132694.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
+			
+			    <img srcset="https://images.pexels.com/photos/704971/pexels-photo-704971.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350 1x, https://images.pexels.com/photos/704971/pexels-photo-704971.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=350 2x" width="525" height="350" style="background:rgb(221,215,210)" class="photo-item__img" alt="Person Mixing Cereal, Milk, and Strawberry Jam on White Ceramic Bowl" data-big-src="https://images.pexels.com/photos/704971/pexels-photo-704971.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" data-large-src="https://images.pexels.com/photos/704971/pexels-photo-704971.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" data-pin-media="https://images.pexels.com/photos/704971/pexels-photo-704971.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=1200&amp;w=800" src="https://images.pexels.com/photos/704971/pexels-photo-704971.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
+			
+			    <img srcset="https://images.pexels.com/photos/461428/pexels-photo-461428.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350 1x, https://images.pexels.com/photos/461428/pexels-photo-461428.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=350 2x" width="525" height="350" style="background:rgb(124,96,71)" class="photo-item__img" alt="Free stock photo of food, healthy, wood, cup" data-big-src="https://images.pexels.com/photos/461428/pexels-photo-461428.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" data-large-src="https://images.pexels.com/photos/461428/pexels-photo-461428.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" data-pin-media="https://images.pexels.com/photos/461428/pexels-photo-461428.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=1200&amp;w=800" src="https://images.pexels.com/photos/461428/pexels-photo-461428.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
+			
+			    <img srcset="https://images.pexels.com/photos/139259/pexels-photo-139259.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350 1x, https://images.pexels.com/photos/139259/pexels-photo-139259.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=350 2x" width="525" height="350" style="background:rgb(221,215,209)" class="photo-item__img" alt="4 Pineapples Photo" data-big-src="https://images.pexels.com/photos/139259/pexels-photo-139259.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" data-large-src="https://images.pexels.com/photos/139259/pexels-photo-139259.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" data-pin-media="https://images.pexels.com/photos/139259/pexels-photo-139259.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=1200&amp;w=800" src="https://images.pexels.com/photos/139259/pexels-photo-139259.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350">
 
+			</div>
+		</div>
+	</section>
+	<footer style="padding: 40px; background: #252525; color: #fff; text-align: center; font-size: 12px; ">
+		<p>2018 © Copyright Miko's All rights reserved</p>
+		<div><img src="https://cdn.dribbble.com/users/627/screenshots/1854272/restaurant-drbl_1x.png" alt="" style="width: 54px;"></div>
+	</footer>
+	<script src="js/jquery.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.close').click(function(event) {
+				$('.view-dish').fadeOut('slow');
+			});
+			$('.dish-range>img').click(function(event) {
+				$('.view-dish').show();
+				$('.meal').attr('src', $(this).attr('src'));
+			});
+		});
+	</script>
 </body>
 </html>
